@@ -105,14 +105,46 @@ textarea {
     background-color: #F6921E;
  }
 
- svg.main-logo {
-    max-width: 300px;
+
+ .droplet{
+    position:absolute;
+    width:100px;
+    top:50%;
+    left:50%;
+    z-index: 100;
+ }
+
+
+
+.main-logo {
+    width:80%;
+    min-width: 200px;
+    max-width: 500px;
     position:absolute;
     top:50%;
     left:50%;
     transform:translateX(-50%) translateY(-50%);
+
  }
 
+  .main-logo svg path, .main-logo svg polygon{
+    transition:300ms;
+  }
+
+  .main-logo:hover svg path{
+    fill:#fff;
+    transform:translateX(-25%) translateY(-25%);
+  }
+
+  .main-logo:hover svg polygon {
+    fill:#fff;
+    transform:translateX(25%) translateY(25%);
+  }
+
+ @-webkit-keyframes shape-animation {
+    from {transform:scale(0);}
+    to {transform:scale(0);}
+} 
 
 
 
