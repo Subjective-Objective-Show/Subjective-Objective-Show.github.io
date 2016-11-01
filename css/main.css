@@ -152,12 +152,10 @@ a {
 }
 
 a:after {
-  content:"\219D";
+  content:"\2934";
+  display: inline-block;
   opacity:0;
-  position: absolute;
-  margin-left: 0em;
-  -webkit-transition: 200ms;
-  transition:200ms;
+  transition:300ms;
 }
 
 
@@ -168,9 +166,9 @@ a:hover {
 
 a:hover:after {
   content:"\2934";
+
   opacity:1;
-  position: absolute;
-  margin-left: 1em;
+  transition:300ms;
 }
 
 
@@ -274,12 +272,13 @@ a {
 }
 
 a:after {
-  content:"\219D";
+  content:"\2934";
+  display: inline-block;
   opacity:0;
-  position: absolute;
-  margin-left: 0em;
-  -webkit-transition: 200ms;
-  transition:200ms;
+  margin-left:5px;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  transition:300ms;
 }
 
 
@@ -290,11 +289,13 @@ a:hover {
 
 a:hover:after {
   content:"\2934";
+  display: inline-block;
   opacity:1;
-  position: absolute;
-  margin-left: 1em;
+  margin-left:5px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  transition:300ms;
 }
-
 
 
 
@@ -345,7 +346,7 @@ a:hover:after {
   }
 
 
- .bg-elements img.hover, .bg-elements img.bg{
+ .bg-elements img.hover, .bg-elements img.bg, .bg-elements img.cycle{
     opacity:1;
   } 
 
