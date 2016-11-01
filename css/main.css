@@ -307,8 +307,8 @@ a:hover:after {
     right:-50%;
     width:100%;
     z-index: -1;
-    -webkit-transform:rotateZ(-90deg) rotateX(-30deg) translateZ(-500px);
-            transform:rotateZ(-90deg) rotateX(-30deg) translateZ(-500px);
+    -webkit-transform: rotateZ(-90deg) rotateX(-30deg) translateX(150px) translateZ(-500px);
+            transform: rotateZ(-90deg) rotateX(-30deg) translateX(150px) translateZ(-500px);
  }
 
   .main-logo svg path, .main-logo svg polygon{
