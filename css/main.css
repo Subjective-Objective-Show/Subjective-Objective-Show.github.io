@@ -102,8 +102,26 @@ textarea {
 
 
  body {
-    background-color: #F6921E;
+    background-color: whitesmoke;
+    overflow: hidden;
+    
  }
+
+ .perspective-wrap {
+    perspective: 1000;
+    animation-name: perspective-shift;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    height:100vh;
+    width:100vw;
+
+ }
+
+@-webkit-keyframes  perspective-shift {
+    from {perspective: 1000;}
+    to {perspective: 500;}
+} 
 
 
  .droplet{
@@ -115,31 +133,97 @@ textarea {
  }
 
 
+.participants {
+  width:20%;
+  min-width: 300px;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(-10deg);
+  position:absolute;
+  top:10%;
+  left:20%;
+  z-index: 1000;
+}
+
+.participants ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+  columns: 2;
+  font-size: 12px;
+}
+
+.participants ul li{
+  display:block;
+}
+
+.participants ul li a{
+
+}
+
+.information {
+  text-transform: uppercase;
+  transform: rotateX(30deg) rotateY(30deg) rotateZ(-30deg);
+  bottom:10%;
+  right:10%;
+  position:absolute;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+  padding:.5em 0;
+  display:inline-block;
+}
+
+a:hover {
+  color:#ff7133;
+  background:whitesmoke;
+}
+
 
 .main-logo {
-    width:80%;
-    min-width: 200px;
-    max-width: 500px;
+  transform-style: preserve-3d;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%) translateY(-50%);
-
+    bottom:0%;
+    right:-50%;
+    width:100%;
+    z-index: -1;
+    transform:rotateZ(-90deg) rotateX(-30deg) translateZ(-500px);
  }
 
   .main-logo svg path, .main-logo svg polygon{
     transition:300ms;
   }
 
-  .main-logo:hover svg path{
-    fill:#fff;
-    transform:translateX(-25%) translateY(-25%);
+  .main-logo svg {
+    transform-style: preserve-3d;
+    
   }
 
-  .main-logo:hover svg polygon {
-    fill:#fff;
-    transform:translateX(25%) translateY(25%);
+  .main-logo svg path{
+    fill:#ff7133;
+    transform:translateX(0) translateY(0);
   }
+
+  .main-logo svg polygon {
+    fill:#ff7133;
+    transform:translateX(0) translateY(0);
+  }
+
+
+  .bg-elements img{
+    transform:rotateZ(15deg) rotateX(30deg) translateZ(-600px) translateY(-50%);
+    position: absolute;
+    opacity:0;
+    transition:300ms;
+  }
+
+
+ .bg-elements img.hover, .bg-elements img.bg{
+    opacity:1;
+  }
+
+
+ 
 
  @-webkit-keyframes shape-animation {
     from {transform:scale(0);}
