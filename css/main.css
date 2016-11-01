@@ -95,24 +95,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+ @-webkit-keyframes perspective-shift {
+    from {-webkit-perspective: 1000; }
+    to {-webkit-perspective: 500;}
+} 
 
-.example {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
-}@media screen and (max-width: 479px) {
+@keyframes perspective-shift {
+    from {-webkit-perspective: 1000;}
+    to {-webkit-perspective: 500;}
+} 
 
- body {
+@media screen and (max-width: 479px) {
+
+body {
     background-color: whitesmoke;
-    
  }
 
  .perspective-wrap {
@@ -218,6 +214,8 @@ a:hover:after {
     width:100vw;
 
  } 
+
+
 
 
  .droplet{
