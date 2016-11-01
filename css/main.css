@@ -180,6 +180,9 @@ a:hover {
 }
 
 
+
+
+
 .main-logo {
   transform-style: preserve-3d;
     position:absolute;
@@ -214,7 +217,7 @@ a:hover {
     transform:rotateZ(15deg) rotateX(30deg) translateZ(-200px) translateY(-50%);
     position: absolute;
     opacity:0;
-   
+    transition:300ms;
   }
 
 
