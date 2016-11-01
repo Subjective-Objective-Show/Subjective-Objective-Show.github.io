@@ -96,10 +96,92 @@ textarea {
    ========================================================================== */
 
 
+@media screen and (max-width: 479px) {
+
+ body {
+    background-color: whitesmoke;
+    
+ }
+
+ .perspective-wrap {
+    margin-right:20%;
+    padding:1em;
+ }
 
 
+ .participants ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+  font-size: 16px;
+}
+
+.participants ul li{
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+.participants ul li a{
+}
+
+.information {
+}
+
+.information p{
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  margin:.3em 0;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+  padding:.5em 0;
+  display:inline-block;
+  position:relative;
+}
+
+a:after {
+  content:"\219D";
+  opacity:0;
+  position: absolute;
+  margin-left: 0em;
+  transition:200ms;
+}
 
 
+a:hover {
+  font-weight: bold;
+  background:whitesmoke;
+}
+
+a:hover:after {
+  content:"\2934";
+  opacity:1;
+  position: absolute;
+  margin-left: 1em;
+}
+
+
+.main-logo {
+    position:fixed;
+    bottom:15%;
+    left:35%;
+    width:100%;
+    z-index: -1;
+    transform:rotateZ(-90deg);
+ }
+
+ .bg-elements img{
+    display:none;
+  }
+
+}
+
+
+@media screen and (min-width: 480px) {
 
  body {
     background-color: whitesmoke;
@@ -139,7 +221,7 @@ textarea {
   transform: rotateX(-10deg) rotateY(-10deg) rotateZ(-10deg);
   position:absolute;
   top:10%;
-  left:20%;
+  left:10%;
   z-index: 1000;
 }
 
@@ -163,7 +245,7 @@ textarea {
   text-transform: uppercase;
   transform: rotateX(30deg) rotateY(30deg) rotateZ(-30deg);
   bottom:10%;
-  right:10%;
+  right:0%;
   position:absolute;
 }
 
@@ -172,11 +254,28 @@ a {
   text-decoration: none;
   padding:.5em;
   display:inline-block;
+  position:relative;
 }
+
+a:after {
+  content:"\219D";
+  opacity:0;
+  position: absolute;
+  margin-left: 0em;
+  transition:200ms;
+}
+
 
 a:hover {
   font-weight: bold;
   background:whitesmoke;
+}
+
+a:hover:after {
+  content:"\2934";
+  opacity:1;
+  position: absolute;
+  margin-left: 1em;
 }
 
 
@@ -234,6 +333,8 @@ a:hover {
 } 
 
 
+    
+}
 
 
 
