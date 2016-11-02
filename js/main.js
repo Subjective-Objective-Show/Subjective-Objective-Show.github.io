@@ -238,14 +238,4 @@ $( document ).ready(function() {
         });
 
 
-jQuery(function( $ ) { // DOM is ready
 
-  var $el = $(".bg-elements>img"), tot = $el.length, c = 0;
-
-  $el.eq(c).addClass("hover"); // initial highlight
-
-  setInterval(function() {
-    $el.removeClass("hover").eq(++c%tot).addClass("hover");
-  }, 3000);
-
-});

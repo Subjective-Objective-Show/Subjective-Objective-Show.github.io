@@ -40,7 +40,7 @@ var Ball = function () {
   Ball.prototype.update = function update() {
     this.x += this.vx;
     this.y += this.vy;
-    this.r -= .01;
+    this.r -= .05;
   };
 
   return Ball;
@@ -65,8 +65,8 @@ function loop() {
     b.update();
   }
 
-  origin.x += (mouse.x - origin.x) * .15;
-  origin.y += (mouse.y - origin.y) * .15;
+  origin.x += (mouse.x - origin.x) * .25;
+  origin.y += (mouse.y - origin.y) * .25;
 
   context.fillStyle = "#FF7433";
   context.beginPath();
