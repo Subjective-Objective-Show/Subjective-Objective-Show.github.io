@@ -21,6 +21,23 @@
 
         <!-- Add your site or application content here -->
 
+<!-- ///// mouse-blob effect ///// -->
+<div class="fix-window">
+  <canvas id="canvas"></canvas>
+    <div id="stats"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -9"/>
+        </filter>
+    </defs>
+    </svg>
+</div>
+<!-- end. coordinating scripts at bottom -->
+
+
+
 <div class="perspective-wrap">
 
 <div class="main-logo">
@@ -51,7 +68,7 @@
 <li><a class="nicolef" href="http://nfarhan.wixsite.com/portfolio">Nicole Farhan</a></li>
 <li><a class="mjd" href="https://www.behance.net/mjdidonna">MJ DiDonna</a></li>
 <li><a class="maggieg" href="http://www.maggiege.com/ ">Maggie Ge</a></li>
-<li><a class="mackenzies" href="kenzie.co">MacKenzie Schroeder</a></li>
+<li><a class="mackenzies" href="http://www.kenzie.co">MacKenzie Schroeder</a></li>
 <li><a class="londonz" href="http://www.londonzhang.com/">London Zhang</a></li>
 <li><a class="lameesam" href="https://www.behance.net/lmallic">Lameesa Mallic</a></li>
 <li><a class="karle" href="https://karlericksen.com/">Karl Eriksen</a></li>
@@ -134,5 +151,11 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
+<!-- mouse-blob scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js'></script>
+
+    <script src="js/blobs.js"></script>
+
     </body>
 </html>

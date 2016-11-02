@@ -284,7 +284,7 @@ a:after {
 
 a:hover {
   font-weight: bold;
-  background:whitesmoke;
+  /*background-color: whitesmoke;*/
 }
 
 a:hover:after {
@@ -527,4 +527,37 @@ a:hover:after {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+
+
+/* ==========================================================================
+   Mouse-blob effect
+   ========================================================================== */
+
+*{
+  /*margin: 0;
+  padding: 0*/
+}
+
+#canvas {
+  position: absolute;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+}
+
+#stats {
+  position:absolute;
+  top:0;
+  left:0;
+  clear: both;
+  z-index: 0;
+  opacity: 0;
+}
+
+.fix-window {
+  height: 1vh;
+  width: 1vw;
+  z-index: 9999;
 }
