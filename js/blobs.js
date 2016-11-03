@@ -4,7 +4,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var canvas = document.getElementById("canvas"),
     context = canvas.getContext("2d"),
-    colorPallete = ["#FF7433", "#F5F5F5", "FF7433"],
+    colorPallete = ["#FF7433", "#F5F5F5", "F5F5F5"],
     stats = new Stats(),
     div = document.getElementById("stats");
 
@@ -40,7 +40,7 @@ var Ball = function () {
   Ball.prototype.update = function update() {
     this.x += this.vx;
     this.y += this.vy;
-    this.r -= .05;
+    this.r -= .01;
   };
 
   return Ball;

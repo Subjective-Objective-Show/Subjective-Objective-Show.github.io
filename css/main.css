@@ -541,11 +541,16 @@ a:hover:after {
   padding: 0*/
 }
 
-#canvas {
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    #canvas {
   position: absolute;
   -webkit-filter: url("#goo");
   filter: url("#goo");
 }
+}
+
+
+
 
 #stats {
   position:absolute;
